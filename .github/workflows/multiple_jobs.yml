@@ -21,6 +21,7 @@ jobs:
 
 
   test: 
+    need: build
     runs-on: ubuntu-latest
     steps:
       - name: Sleep for 10 seconds
@@ -30,6 +31,7 @@ jobs:
         run: grep -i "dragon" dragon.txt
 
   deploy: 
+    need: test
     runs-on: ubuntu-latest
     steps: 
       - name: Read File

@@ -20,7 +20,7 @@ jobs:
       run: docker login --username=mohammedah25 --password=Ghana@2020
 
     - name: Docker Publish 
-      run: docker push docker.io/efotsowoe/resume-app:latest
+      run: docker push docker.io/mohammedah25/resume-app:latest
 
   docker_deploy:
     needs: docker_build
@@ -30,4 +30,4 @@ jobs:
       - name: Docker Login
         run: docker login --username=mohammedah25 --password=Ghana@2020
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker.io/efotsowoe/resume-app:latest
+        run: docker run -d -p 8080:80 docker.io/mohammedah25/resume-app:latest
